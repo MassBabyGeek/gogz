@@ -5,7 +5,9 @@
     "portfolio": "Realizaciones",
     "about": "Sobre Nosotros",
     "contact": "Contacto",
-    "cta": "Presupuesto Gratis"
+    "cta": "Presupuesto Gratis",
+    "callLabel": "Llamar al {phone}",
+    "toggleMenuLabel": "Abrir/Cerrar menú"
   },
   "hero": {
     "badge": "Desde {year} • +{projects} proyectos realizados",
@@ -81,6 +83,9 @@
     "subtitle": "Portfolio",
     "location": "Ubicación",
     "year": "Año",
+    "filters": {
+      "all": "Todos"
+    },
     "projects": {
       "villa": {
         "title": "Villa Moderna Les Pins",
@@ -150,6 +155,7 @@
   "testimonials": {
     "title": "Confían en Nosotros",
     "subtitle": "Testimonios",
+    "starLabel": "Estrella",
     "clients": {
       "sophie": {
         "name": "Sophie Martin",
@@ -240,7 +246,12 @@
     "description": "Expertos en construcción, renovación y albañilería desde hace más de 25 años.",
     "quickLinks": "Enlaces Rápidos",
     "followUs": "Síguenos",
-    "copyright": "© {year} BTP Excellence. Todos los derechos reservados."
+    "copyright": "© {year} BTP Excellence. Todos los derechos reservados.",
+    "social": {
+      "facebookLabel": "Facebook",
+      "linkedinLabel": "LinkedIn",
+      "instagramLabel": "Instagram"
+    }
   },
   "company": {
     "name": "BTP Excellence",
@@ -250,5 +261,13 @@
     "email": "contact@btp-excellence.fr",
     "address": "15 Avenue des Bâtisseurs, 75000 Paris",
     "founded": "1998"
+  },
+  "languageSwitcher": {
+    "changeLanguageLabel": "Cambiar idioma"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español"
   }
 }

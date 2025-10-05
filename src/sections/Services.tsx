@@ -20,19 +20,7 @@ const iconMap = {
   Hammer
 };
 
-interface Service {
-  id: string;
-  icon: keyof typeof iconMap;
-  title: string;
-  description: string;
-  features: string[];
-}
-
-interface ServicesProps {
-  services?: Service[];
-}
-
-export default function Services({ services }: ServicesProps) {
+export default function Services() {
   const t = useTranslations("services");
   const SERVICES = getServices(t)
 

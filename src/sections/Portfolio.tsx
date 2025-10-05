@@ -11,15 +11,16 @@ import { getProjects } from "@/lib/constants";
 export default function Portfolio() {
   const t = useTranslations("portfolio");
 
-  const [selectedCategory, setSelectedCategory] = useState<string>("Tous");
+  const allFilter = t("filters.all");
+  const [selectedCategory, setSelectedCategory] = useState<string>(allFilter);
 
   // Récupère les projets traduits
   const PROJECTS = getProjects(t);
 
   // Extraction des catégories uniques
-  const categories = ["Tous", ...Array.from(new Set(PROJECTS.map(p => p.category)))];
+  const categories = [allFilter, ...Array.from(new Set(PROJECTS.map(p => p.category)))];
 
-  const filteredProjects = selectedCategory === "Tous"
+  const filteredProjects = selectedCategory === allFilter
     ? PROJECTS
     : PROJECTS.filter(p => p.category === selectedCategory);
 

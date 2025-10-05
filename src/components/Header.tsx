@@ -53,6 +53,11 @@ export default function Header() {
           : "bg-background/30 backdrop-blur-md py-6 border-b border-border/30"
       )}
     >
+      {/* Sélecteur de langue - Position absolue hors du container, aligné à droite */}
+      <div className="absolute top-1/2 -translate-y-1/2 right-6 md:right-12 lg:right-20 z-[60]">
+        <LanguageSwitcher />
+      </div>
+
       <Container>
         <nav className="flex items-center justify-between" aria-label="Navigation principale">
           {/* Logo */}
@@ -71,12 +76,12 @@ export default function Header() {
           </div>
 
           {/* Navigation Desktop */}
-          <ul className="hidden lg:flex items-center gap-10">
+          <ul className="hidden lg:flex items-center gap-8 xl:gap-12">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-foreground-secondary hover:text-primary-light font-medium transition-all duration-300 hover:scale-110 inline-block"
+                  className="text-foreground-secondary hover:text-primary-light font-medium transition-all duration-300 hover:scale-110 inline-block whitespace-nowrap px-2"
                 >
                   {t(item.key as "home" | "services" | "portfolio" | "about" | "contact")}
                 </a>
@@ -86,11 +91,10 @@ export default function Header() {
 
           {/* Bouton CTA Desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <LanguageSwitcher />
             <a
               href={`tel:${COMPANY_INFO.phone}`}
-              className="flex items-center gap-2 text-foreground-secondary hover:text-gold transition-colors duration-300"
-              aria-label={`Appeler au ${COMPANY_INFO.phone}`}
+              className="flex items-center gap-2 text-foreground-secondary hover:text-gold transition-colors duration-300 whitespace-nowrap"
+              aria-label={t('callLabel', { phone: COMPANY_INFO.phone })}
             >
               <Phone size={20} />
               <span className="font-semibold">{COMPANY_INFO.phone}</span>
@@ -104,7 +108,7 @@ export default function Header() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-foreground hover:text-primary-light transition-colors rounded-lg hover:bg-background-elevated"
-            aria-label="Toggle menu"
+            aria-label={t('toggleMenuLabel')}
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -120,7 +124,7 @@ export default function Header() {
                   <a
                     href={item.href}
                     onClick={handleNavClick}
-                    className="block text-foreground hover:text-primary-light font-medium text-lg transition-colors py-2 px-4 rounded-lg hover:bg-background-elevated"
+                    className="block text-foreground hover:text-primary-light font-medium text-lg transition-colors py-2 px-4 rounded-lg hover:bg-background-elevated whitespace-nowrap"
                   >
                     {t(item.key as "home" | "services" | "portfolio" | "about" | "contact")}
                   </a>
@@ -128,12 +132,9 @@ export default function Header() {
               ))}
             </ul>
             <div className="mt-6 flex flex-col gap-4 pt-6 border-t border-border">
-              <div className="flex justify-center mb-2">
-                <LanguageSwitcher />
-              </div>
               <a
                 href={`tel:${COMPANY_INFO.phone}`}
-                className="flex items-center gap-3 text-foreground-secondary hover:text-gold transition-colors py-2 px-4"
+                className="flex items-center gap-3 text-foreground-secondary hover:text-gold transition-colors py-2 px-4 whitespace-nowrap"
               >
                 <Phone size={20} />
                 <span className="font-semibold">{COMPANY_INFO.phone}</span>

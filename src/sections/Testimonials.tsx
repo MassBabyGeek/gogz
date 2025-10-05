@@ -19,8 +19,8 @@ export default function Testimonials() {
   return (
     <Section
       id="testimonials"
-      title={t("title") || "Ils nous font confiance"}
-      subtitle={t("subtitle") || "Découvrez les retours d'expérience de nos clients satisfaits"}
+      title={t("title")}
+      subtitle={t("subtitle")}
       background="darker"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[var(--gap-cards)] lg:gap-[var(--gap-cards-lg)]">
@@ -39,7 +39,7 @@ export default function Testimonials() {
                   key={i}
                   size={20}
                   className="fill-gold text-gold"
-                  aria-label="Étoile"
+                  aria-label={t("starLabel")}
                 />
               ))}
             </div>

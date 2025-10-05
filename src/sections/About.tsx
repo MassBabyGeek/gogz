@@ -13,25 +13,27 @@ import Section from "@/components/Section";
 import { useTranslations } from "next-intl";
 
 export default function About() {
-  const t = useTranslations();
+  const t = useTranslations("about");
+  const tCompany = useTranslations("company");
+  const tHero = useTranslations("hero");
 
-  const COMPANY_INFO = getCompanyInfo(t);
+  const COMPANY_INFO = getCompanyInfo(tCompany);
 
   const values = [
     {
       icon: Target,
-      title: t("about.values.quality.title"),
-      description: t("about.values.quality.description")
+      title: t("values.quality.title"),
+      description: t("values.quality.description")
     },
     {
       icon: Shield,
-      title: t("about.values.trust.title"),
-      description: t("about.values.trust.description")
+      title: t("values.trust.title"),
+      description: t("values.trust.description")
     },
     {
       icon: Heart,
-      title: t("about.values.innovation.title"),
-      description: t("about.values.innovation.description")
+      title: t("values.innovation.title"),
+      description: t("values.innovation.description")
     }
   ];
 
@@ -39,25 +41,25 @@ export default function About() {
     {
       icon: Award,
       value: `${new Date().getFullYear() - Number(COMPANY_INFO.founded)}+`,
-      label: t("about.stats.experience")
+      label: t("stats.experience")
     },
     {
       icon: Users,
       value: `${COMPANY_INFO.employees}`,
-      label: t("about.stats.employees")
+      label: t("stats.employees")
     },
     {
       icon: TrendingUp,
       value: `${COMPANY_INFO.projects}+`,
-      label: t("about.stats.projects")
+      label: t("stats.projects")
     }
   ];
 
   return (
     <Section
       id="about"
-      title={t("about.title")}
-      subtitle={t("about.subtitle")}
+      title={t("title")}
+      subtitle={t("subtitle")}
       background="elevated"
     >
       <div className="grid lg:grid-cols-2 gap-[var(--spacing-2xl)] lg:gap-[var(--spacing-3xl)] items-center">
@@ -69,15 +71,15 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            {t("about.heading", { years: new Date().getFullYear() - Number(COMPANY_INFO.founded) })}
+            {t("heading", { years: new Date().getFullYear() - Number(COMPANY_INFO.founded) })}
           </h3>
 
           <div className="space-y-4 text-foreground-secondary leading-relaxed">
             <p>
-              {t("about.description", { founded: COMPANY_INFO.founded, name: COMPANY_INFO.name })}
+              {t("description", { founded: COMPANY_INFO.founded })}
             </p>
             <p>
-              {t("about.mission")}
+              {t("mission")}
             </p>
           </div>
 
@@ -122,13 +124,13 @@ export default function About() {
             {/* Badge */}
             <div className="absolute bottom-6 left-6 glass-strong px-6 py-3 rounded-lg shadow-lg">
               <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-sm text-foreground-secondary">{t("hero.stats.satisfaction")}</div>
+              <div className="text-sm text-foreground-secondary">{tHero("stats.satisfaction")}</div>
             </div>
           </div>
 
           {/* Nos valeurs */}
           <div className="space-y-4">
-            <h4 className="text-xl font-bold text-foreground">{t("about.values.title")}</h4>
+            <h4 className="text-xl font-bold text-foreground">{t("values.title")}</h4>
             {values.map((value, index) => (
               <motion.div
                 key={index}

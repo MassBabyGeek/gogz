@@ -41,7 +41,8 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const COMPANY_INFO = getCompanyInfo(t)
+  const tCompany = useTranslations("company");
+  const COMPANY_INFO = getCompanyInfo(tCompany);
 
   /**
    * Validation du formulaire

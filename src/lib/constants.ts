@@ -1,10 +1,10 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { NavItem, Service, Project, Testimonial } from "./types";
 
 /**
  * Navigation principale
+ * @param t - Hook de traduction next-intl
+ * @returns Liste des éléments de navigation
  */
 export const getNavItems = (t: ReturnType<typeof useTranslations>): NavItem[] => [
   { label: t("nav.home"), href: "#hero" },
@@ -16,6 +16,8 @@ export const getNavItems = (t: ReturnType<typeof useTranslations>): NavItem[] =>
 
 /**
  * Services proposés par l'entreprise
+ * @param t - Hook de traduction next-intl
+ * @returns Liste des services avec icônes et caractéristiques
  */
 export const getServices = (t: ReturnType<typeof useTranslations>): Service[] => [
   {
@@ -70,6 +72,8 @@ export const getServices = (t: ReturnType<typeof useTranslations>): Service[] =>
 
 /**
  * Projets réalisés (Portfolio)
+ * @param t - Hook de traduction next-intl
+ * @returns Liste des projets avec images et détails
  */
 export const getProjects = (t: ReturnType<typeof useTranslations>): Project[] => [
   {
@@ -130,6 +134,8 @@ export const getProjects = (t: ReturnType<typeof useTranslations>): Project[] =>
 
 /**
  * Témoignages clients
+ * @param t - Hook de traduction next-intl
+ * @returns Liste des témoignages avec avatars et évaluations
  */
 export const getTestimonials = (t: ReturnType<typeof useTranslations>): Testimonial[] => [
   {
@@ -190,6 +196,8 @@ export const getTestimonials = (t: ReturnType<typeof useTranslations>): Testimon
 
 /**
  * Informations de l'entreprise
+ * @param t - Hook de traduction next-intl
+ * @returns Objet avec toutes les informations de contact et métadonnées
  */
 export const getCompanyInfo = (t: ReturnType<typeof useTranslations>) => ({
   name: t("name"),
@@ -199,6 +207,6 @@ export const getCompanyInfo = (t: ReturnType<typeof useTranslations>) => ({
   email: t("email"),
   address: t("address"),
   founded: t("founded"),
-  employees: 45, // tu peux garder les valeurs fixes ou les traduire si nécessaire
+  employees: 45,
   projects: 500
 });

@@ -52,7 +52,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-lg glass hover:bg-primary-light/20 hover:text-primary-light transition-all duration-300"
-                  aria-label="Facebook"
+                  aria-label={tFooter('social.facebookLabel')}
                 >
                   <Facebook size={20} />
                 </a>
@@ -61,7 +61,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-lg glass hover:bg-primary-light/20 hover:text-primary-light transition-all duration-300"
-                  aria-label="LinkedIn"
+                  aria-label={tFooter('social.linkedinLabel')}
                 >
                   <Linkedin size={20} />
                 </a>
@@ -70,7 +70,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-lg glass hover:bg-primary-light/20 hover:text-primary-light transition-all duration-300"
-                  aria-label="Instagram"
+                  aria-label={tFooter('social.instagramLabel')}
                 >
                   <Instagram size={20} />
                 </a>

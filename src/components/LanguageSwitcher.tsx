@@ -6,15 +6,15 @@
  */
 
 import { usePathname, useRouter } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Globe } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 const languages = [
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'es', label: 'Español', flag: '🇪🇸' }
+  { code: 'fr', flag: '🇫🇷' },
+  { code: 'en', flag: '🇬🇧' },
+  { code: 'es', flag: '🇪🇸' }
 ];
 
 export default function LanguageSwitcher() {
@@ -23,6 +23,8 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('languageSwitcher');
+  const tLang = useTranslations('languages');
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 
@@ -53,7 +55,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-white/10 transition-all duration-300 group"
-        aria-label="Changer de langue"
+        aria-label={t('changeLanguageLabel')}
         aria-expanded={isOpen}
       >
         <Globe size={20} className="text-primary-light group-hover:text-primary transition-colors" />
@@ -78,7 +80,7 @@ export default function LanguageSwitcher() {
               )}
             >
               <span className="text-2xl">{language.flag}</span>
-              <span className="text-sm">{language.label}</span>
+              <span className="text-sm">{tLang(language.code as 'fr' | 'en' | 'es')}</span>
               {locale === language.code && (
                 <span className="ml-auto text-primary-light">✓</span>
               )}

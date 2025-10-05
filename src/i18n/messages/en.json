@@ -5,7 +5,9 @@
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact",
-    "cta": "Free Quote"
+    "cta": "Free Quote",
+    "callLabel": "Call {phone}",
+    "toggleMenuLabel": "Toggle menu"
   },
   "hero": {
     "badge": "Since {year} • +{projects} completed projects",
@@ -81,6 +83,9 @@
     "subtitle": "Portfolio",
     "location": "Location",
     "year": "Year",
+    "filters": {
+      "all": "All"
+    },
     "projects": {
       "villa": {
         "title": "Modern Villa Les Pins",
@@ -150,6 +155,7 @@
   "testimonials": {
     "title": "They Trust Us",
     "subtitle": "Testimonials",
+    "starLabel": "Star",
     "clients": {
       "sophie": {
         "name": "Sophie Martin",
@@ -240,7 +246,12 @@
     "description": "Expert in construction, renovation and masonry for over 25 years.",
     "quickLinks": "Quick Links",
     "followUs": "Follow Us",
-    "copyright": "© {year} BTP Excellence. All rights reserved."
+    "copyright": "© {year} BTP Excellence. All rights reserved.",
+    "social": {
+      "facebookLabel": "Facebook",
+      "linkedinLabel": "LinkedIn",
+      "instagramLabel": "Instagram"
+    }
   },
   "company": {
     "name": "BTP Excellence",
@@ -250,5 +261,13 @@
     "email": "contact@btp-excellence.fr",
     "address": "15 Avenue des Bâtisseurs, 75000 Paris",
     "founded": "1998"
+  },
+  "languageSwitcher": {
+    "changeLanguageLabel": "Change language"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español"
   }
 }

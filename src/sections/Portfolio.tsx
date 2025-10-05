@@ -10,6 +10,7 @@ import { getProjects } from "@/lib/constants";
 
 export default function Portfolio() {
   const t = useTranslations("portfolio");
+  const tHero = useTranslations("hero")
 
   const allFilter = t("filters.all");
   const [selectedCategory, setSelectedCategory] = useState<string>(allFilter);
@@ -106,7 +107,7 @@ export default function Portfolio() {
 
               <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <button className="w-full bg-secondary text-primary-dark py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
-                  {t("cta")}
+                  {tHero("cta.primary")}
                 </button>
               </div>
             </motion.div>

@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { COMPANY_INFO } from "@/lib/constants";
+import { getCompanyInfo } from "@/lib/constants";
 import Container from "./Container";
 import Button from "./Button";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -27,6 +27,8 @@ export default function Header() {
   const tCompany = useTranslations('company');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const COMPANY_INFO = getCompanyInfo(tCompany)
 
   // Détection du scroll pour effet glassmorphism
   useEffect(() => {

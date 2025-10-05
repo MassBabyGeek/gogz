@@ -9,22 +9,32 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { COMPANY_INFO } from "@/lib/constants";
+import { getCompanyInfo } from "@/lib/constants";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 
 export default function Hero() {
-  const t = useTranslations('hero');
-  const tCompany = useTranslations('company');
+  const t = useTranslations("hero");
+  const tCompany = useTranslations("company");
 
-  const years = new Date().getFullYear() - COMPANY_INFO.founded;
+  const COMPANY_INFO = getCompanyInfo(tCompany)
+
+  const years = new Date().getFullYear() - Number(COMPANY_INFO.founded);
 
   const features = [
-    t('features.quote'),
-    t('features.team'),
-    t('features.warranty'),
-    t('features.deadline')
+    t("features.quote"),
+    t("features.team"),
+    t("features.warranty"),
+    t("features.deadline")
   ];
+
+  const stats = [
+    { value: `${years}+`, label: t("stats.experience") },
+    { value: `${COMPANY_INFO.projects}+`, label: t("stats.projects") },
+    { value: `${COMPANY_INFO.employees}`, label: t("stats.employees") },
+    { value: "100%", label: t("stats.satisfaction") }
+  ];
+
   return (
     <section
       id="hero"
@@ -34,13 +44,12 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop&q=80"
-          alt="Chantier de construction"
+          alt={t("altImage")}
           fill
           className="object-cover"
           priority
           quality={90}
         />
-        {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/95 via-primary-dark/85 to-primary-dark/70" />
       </div>
 
@@ -63,7 +72,7 @@ export default function Hero() {
             >
               <CheckCircle2 size={20} className="text-secondary" />
               <span className="text-sm font-semibold">
-                {t('badge', { year: COMPANY_INFO.founded, projects: COMPANY_INFO.projects })}
+                {t("badge", { year: COMPANY_INFO.founded, projects: COMPANY_INFO.projects })}
               </span>
             </motion.div>
 
@@ -74,7 +83,7 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              {tCompany('tagline')}
+              {tCompany("tagline")}
             </motion.h1>
 
             {/* Sous-titre */}
@@ -84,7 +93,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed"
             >
-              {t('description', { years })}
+              {t("description", { years })}
             </motion.p>
 
             {/* Points clés */}
@@ -121,7 +130,7 @@ export default function Hero() {
                 onClick={() => window.location.href = '#contact'}
                 className="group"
               >
-                {t('cta.primary')}
+                {t("cta.primary")}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -130,7 +139,7 @@ export default function Hero() {
                 onClick={() => window.location.href = '#realisations'}
                 className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary-dark"
               >
-                {t('cta.secondary')}
+                {t("cta.secondary")}
               </Button>
             </motion.div>
           </motion.div>
@@ -142,24 +151,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hidden lg:grid grid-cols-2 gap-[var(--spacing-md)]"
           >
-            {[
-              {
-                value: `${years}+`,
-                label: t('stats.experience')
-              },
-              {
-                value: `${COMPANY_INFO.projects}+`,
-                label: t('stats.projects')
-              },
-              {
-                value: `${COMPANY_INFO.employees}`,
-                label: t('stats.employees')
-              },
-              {
-                value: "100%",
-                label: t('stats.satisfaction')
-              }
-            ].map((stat, index) => (
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

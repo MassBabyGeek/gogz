@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Section Avis Clients - Témoignages de satisfaction
  * Design luxe avec cartes glassmorphism style dimension.dev
@@ -5,16 +7,20 @@
 
 import Section from "@/components/Section";
 import Card from "@/components/Card";
-import { TESTIMONIALS } from "@/lib/constants";
+import { getTestimonials } from "@/lib/constants";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Testimonials() {
+  const t = useTranslations("testimonials");
+  const TESTIMONIALS = getTestimonials(t)
+
   return (
     <Section
       id="testimonials"
-      title="Ils nous font confiance"
-      subtitle="Découvrez les retours d'expérience de nos clients satisfaits"
+      title={t("title") || "Ils nous font confiance"}
+      subtitle={t("subtitle") || "Découvrez les retours d'expérience de nos clients satisfaits"}
       background="darker"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[var(--gap-cards)] lg:gap-[var(--gap-cards-lg)]">

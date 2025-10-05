@@ -7,7 +7,7 @@
 
 import { MapPin, Phone, Mail, Facebook, Linkedin, Instagram } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { COMPANY_INFO } from "@/lib/constants";
+import { getCompanyInfo } from "@/lib/constants";
 import Container from "./Container";
 
 const navItems = [
@@ -24,6 +24,8 @@ export default function Footer() {
   const tFooter = useTranslations('footer');
   const tCompany = useTranslations('company');
   const tServices = useTranslations('services');
+
+  const COMPANY_INFO = getCompanyInfo(tCompany) 
 
   return (
     <footer className="bg-background-secondary border-t border-border">

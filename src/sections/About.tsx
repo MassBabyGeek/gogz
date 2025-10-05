@@ -8,51 +8,56 @@
 import { motion } from "framer-motion";
 import { Award, Users, TrendingUp, Shield, Target, Heart } from "lucide-react";
 import Image from "next/image";
-import { COMPANY_INFO } from "@/lib/constants";
+import { getCompanyInfo } from "@/lib/constants";
 import Section from "@/components/Section";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations();
+
+  const COMPANY_INFO = getCompanyInfo(t);
+
   const values = [
     {
       icon: Target,
-      title: "Qualité",
-      description: "Excellence et précision dans chaque projet"
+      title: t("about.values.quality.title"),
+      description: t("about.values.quality.description")
     },
     {
       icon: Shield,
-      title: "Fiabilité",
-      description: "Respect des engagements et des délais"
+      title: t("about.values.trust.title"),
+      description: t("about.values.trust.description")
     },
     {
       icon: Heart,
-      title: "Passion",
-      description: "Amour du métier et satisfaction client"
+      title: t("about.values.innovation.title"),
+      description: t("about.values.innovation.description")
     }
   ];
 
   const stats = [
     {
       icon: Award,
-      value: `${new Date().getFullYear() - COMPANY_INFO.founded}+`,
-      label: "Années d'expertise"
+      value: `${new Date().getFullYear() - Number(COMPANY_INFO.founded)}+`,
+      label: t("about.stats.experience")
     },
     {
       icon: Users,
       value: `${COMPANY_INFO.employees}`,
-      label: "Professionnels qualifiés"
+      label: t("about.stats.employees")
     },
     {
       icon: TrendingUp,
       value: `${COMPANY_INFO.projects}+`,
-      label: "Projets livrés"
+      label: t("about.stats.projects")
     }
   ];
 
   return (
     <Section
       id="about"
-      title="À propos de nous"
-      subtitle="Notre histoire"
+      title={t("about.title")}
+      subtitle={t("about.subtitle")}
       background="elevated"
     >
       <div className="grid lg:grid-cols-2 gap-[var(--spacing-2xl)] lg:gap-[var(--spacing-3xl)] items-center">
@@ -64,26 +69,15 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            Plus de {new Date().getFullYear() - COMPANY_INFO.founded} ans d&apos;excellence
-            dans le BTP
+            {t("about.heading", { years: new Date().getFullYear() - Number(COMPANY_INFO.founded) })}
           </h3>
 
           <div className="space-y-4 text-foreground-secondary leading-relaxed">
             <p>
-              Fondée en {COMPANY_INFO.founded}, <strong>{COMPANY_INFO.name}</strong> est
-              devenue une référence dans le domaine de la construction, de la rénovation
-              et de la maçonnerie.
+              {t("about.description", { founded: COMPANY_INFO.founded, name: COMPANY_INFO.name })}
             </p>
             <p>
-              Notre équipe de {COMPANY_INFO.employees} professionnels passionnés met son
-              savoir-faire au service de vos projets, qu&apos;ils soient résidentiels ou
-              commerciaux. Nous combinons techniques traditionnelles et innovations
-              modernes pour garantir des résultats durables et de qualité.
-            </p>
-            <p>
-              Certifiés et assurés, nous respectons les normes les plus strictes du
-              secteur. Chaque chantier est une nouvelle opportunité de démontrer notre
-              engagement envers l&apos;excellence et la satisfaction client.
+              {t("about.mission")}
             </p>
           </div>
 
@@ -120,7 +114,7 @@ export default function About() {
           <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&q=80"
-              alt="Équipe BTP Excellence"
+              alt={t("about.title")}
               fill
               className="object-cover"
               loading="lazy"
@@ -128,13 +122,13 @@ export default function About() {
             {/* Badge */}
             <div className="absolute bottom-6 left-6 glass-strong px-6 py-3 rounded-lg shadow-lg">
               <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-sm text-foreground-secondary">Clients satisfaits</div>
+              <div className="text-sm text-foreground-secondary">{t("hero.stats.satisfaction")}</div>
             </div>
           </div>
 
           {/* Nos valeurs */}
           <div className="space-y-4">
-            <h4 className="text-xl font-bold text-foreground">Nos valeurs</h4>
+            <h4 className="text-xl font-bold text-foreground">{t("about.values.title")}</h4>
             {values.map((value, index) => (
               <motion.div
                 key={index}

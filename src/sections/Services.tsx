@@ -10,6 +10,7 @@ import { Building2, HardHat, Wrench, Hammer, Check } from "lucide-react";
 import Section from "@/components/Section";
 import Card, { CardHeader, CardTitle, CardDescription, CardContent } from "@/components/Card";
 import { useTranslations } from "next-intl";
+import { getServices } from "@/lib/constants";
 
 // Map des icônes (principe Single Responsibility)
 const iconMap = {
@@ -33,58 +34,7 @@ interface ServicesProps {
 
 export default function Services({ services }: ServicesProps) {
   const t = useTranslations("services");
-
-  // Si aucune props, on génère les services dynamiquement depuis les traductions
-  const SERVICES: Service[] = services || [
-    {
-      id: "construction",
-      icon: "Building2",
-      title: t("construction.title"),
-      description: t("construction.description"),
-      features: [
-        t("construction.features.houses"),
-        t("construction.features.commercial"),
-        t("construction.features.studies"),
-        t("construction.features.monitoring"),
-      ]
-    },
-    {
-      id: "renovation",
-      icon: "HardHat",
-      title: t("renovation.title"),
-      description: t("renovation.description"),
-      features: [
-        t("renovation.features.interior"),
-        t("renovation.features.exterior"),
-        t("renovation.features.standards"),
-        t("renovation.features.energy"),
-      ]
-    },
-    {
-      id: "maconnerie",
-      icon: "Wrench",
-      title: t("masonry.title"),
-      description: t("masonry.description"),
-      features: [
-        t("masonry.features.structure"),
-        t("masonry.features.facades"),
-        t("masonry.features.walls"),
-        t("masonry.features.foundations"),
-      ]
-    },
-    {
-      id: "gros-oeuvre",
-      icon: "Hammer",
-      title: t("structural.title"),
-      description: t("structural.description"),
-      features: [
-        t("structural.features.earthwork"),
-        t("structural.features.concrete"),
-        t("structural.features.framework"),
-        t("structural.features.elevation"),
-      ]
-    }
-  ];
+  const SERVICES = getServices(t)
 
   return (
     <Section

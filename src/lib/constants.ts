@@ -1,71 +1,69 @@
-/**
- * Constantes de l'application
- * Centralisation des données pour faciliter la maintenance (principe DRY)
- */
+"use client";
 
+import { useTranslations } from "next-intl";
 import { NavItem, Service, Project, Testimonial } from "./types";
 
 /**
  * Navigation principale
  */
-export const NAV_ITEMS: NavItem[] = [
-  { label: "Accueil", href: "#hero" },
-  { label: "Services", href: "#services" },
-  { label: "Réalisations", href: "#realisations" },
-  { label: "À propos", href: "#about" },
-  { label: "Contact", href: "#contact" },
+export const getNavItems = (t: ReturnType<typeof useTranslations>): NavItem[] => [
+  { label: t("nav.home"), href: "#hero" },
+  { label: t("nav.services"), href: "#services" },
+  { label: t("nav.portfolio"), href: "#realisations" },
+  { label: t("nav.about"), href: "#about" },
+  { label: t("nav.contact"), href: "#contact" },
 ];
 
 /**
  * Services proposés par l'entreprise
  */
-export const SERVICES: Service[] = [
+export const getServices = (t: ReturnType<typeof useTranslations>): Service[] => [
   {
     id: "construction",
-    title: "Construction neuve",
-    description: "Nous réalisons vos projets de construction de A à Z avec expertise et qualité.",
+    title: t("construction.title"),
+    description: t("construction.description"),
     icon: "Building2",
     features: [
-      "Maisons individuelles",
-      "Bâtiments commerciaux",
-      "Études techniques",
-      "Suivi de chantier"
+      t("construction.features.houses"),
+      t("construction.features.commercial"),
+      t("construction.features.studies"),
+      t("construction.features.monitoring"),
     ]
   },
   {
     id: "renovation",
-    title: "Rénovation",
-    description: "Rénovation complète ou partielle de vos bâtiments avec respect du cachet existant.",
+    title: t("renovation.title"),
+    description: t("renovation.description"),
     icon: "HardHat",
     features: [
-      "Rénovation intérieure",
-      "Rénovation extérieure",
-      "Mise aux normes",
-      "Rénovation énergétique"
+      t("renovation.features.interior"),
+      t("renovation.features.exterior"),
+      t("renovation.features.standards"),
+      t("renovation.features.energy"),
     ]
   },
   {
     id: "maconnerie",
-    title: "Maçonnerie",
-    description: "Travaux de maçonnerie générale et spécialisée par des artisans qualifiés.",
+    title: t("masonry.title"),
+    description: t("masonry.description"),
     icon: "Wrench",
     features: [
-      "Gros œuvre",
-      "Façades",
-      "Murs porteurs",
-      "Fondations"
+      t("masonry.features.structure"),
+      t("masonry.features.facades"),
+      t("masonry.features.walls"),
+      t("masonry.features.foundations"),
     ]
   },
   {
     id: "gros-oeuvre",
-    title: "Gros œuvre",
-    description: "Expertise en gros œuvre pour des structures solides et durables.",
+    title: t("structural.title"),
+    description: t("structural.description"),
     icon: "Hammer",
     features: [
-      "Terrassement",
-      "Dalle béton",
-      "Charpente",
-      "Élévation des murs"
+      t("structural.features.earthwork"),
+      t("structural.features.concrete"),
+      t("structural.features.framework"),
+      t("structural.features.elevation"),
     ]
   }
 ];
@@ -73,118 +71,118 @@ export const SERVICES: Service[] = [
 /**
  * Projets réalisés (Portfolio)
  */
-export const PROJECTS: Project[] = [
+export const getProjects = (t: ReturnType<typeof useTranslations>): Project[] => [
   {
-    id: "1",
-    title: "Villa moderne Les Pins",
-    category: "Construction neuve",
-    description: "Villa contemporaine de 200m² avec piscine et terrasse.",
+    id: "villa",
+    title: t("projects.villa.title"),
+    category: t("projects.villa.category"),
+    description: t("projects.villa.description"),
     imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
     year: 2023,
-    location: "Lyon"
+    location: t("projects.villa.location")
   },
   {
-    id: "2",
-    title: "Rénovation Château de la Loire",
-    category: "Rénovation",
-    description: "Rénovation complète d'un château du 18ème siècle.",
+    id: "castle",
+    title: t("projects.castle.title"),
+    category: t("projects.castle.category"),
+    description: t("projects.castle.description"),
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
     year: 2023,
-    location: "Tours"
+    location: t("projects.castle.location")
   },
   {
-    id: "3",
-    title: "Immeuble résidentiel Le Parc",
-    category: "Gros œuvre",
-    description: "Construction d'un immeuble de 5 étages, 20 appartements.",
+    id: "building",
+    title: t("projects.building.title"),
+    category: t("projects.building.category"),
+    description: t("projects.building.description"),
     imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
     year: 2022,
-    location: "Marseille"
+    location: t("projects.building.location")
   },
   {
-    id: "4",
-    title: "Extension maison familiale",
-    category: "Maçonnerie",
-    description: "Extension de 50m² avec création d'une véranda.",
+    id: "extension",
+    title: t("projects.extension.title"),
+    category: t("projects.extension.category"),
+    description: t("projects.extension.description"),
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
     year: 2024,
-    location: "Bordeaux"
+    location: t("projects.extension.location")
   },
   {
-    id: "5",
-    title: "Centre commercial Horizon",
-    category: "Construction neuve",
-    description: "Bâtiment commercial de 3000m² avec parking souterrain.",
-    imageUrl: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1195&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: "mall",
+    title: t("projects.mall.title"),
+    category: t("projects.mall.category"),
+    description: t("projects.mall.description"),
+    imageUrl: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1195&auto=format&fit=crop&ixlib=rb-4.1.0",
     year: 2022,
-    location: "Lille"
+    location: t("projects.mall.location")
   },
   {
-    id: "6",
-    title: "Restauration façade historique",
-    category: "Rénovation",
-    description: "Restauration de façade d'un bâtiment classé monument historique.",
+    id: "facade",
+    title: t("projects.facade.title"),
+    category: t("projects.facade.category"),
+    description: t("projects.facade.description"),
     imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
     year: 2023,
-    location: "Paris"
+    location: t("projects.facade.location")
   }
 ];
 
 /**
  * Témoignages clients
  */
-export const TESTIMONIALS: Testimonial[] = [
+export const getTestimonials = (t: ReturnType<typeof useTranslations>): Testimonial[] => [
   {
-    id: "1",
-    name: "Sophie Martin",
-    role: "Propriétaire",
-    project: "Villa moderne Les Pins",
-    quote: "Une équipe exceptionnelle qui a transformé notre rêve en réalité. La qualité du travail et le respect des délais ont dépassé nos attentes. Nous recommandons vivement BTP Excellence.",
+    id: "sophie",
+    name: t("clients.sophie.name"),
+    role: t("clients.sophie.role"),
+    project: t("clients.sophie.project"),
+    quote: t("clients.sophie.quote"),
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
     rating: 5
   },
   {
-    id: "2",
-    name: "Jean-Pierre Durand",
-    role: "Directeur Général",
-    project: "Centre commercial Horizon",
-    quote: "Professionnalisme remarquable du début à la fin. BTP Excellence a su gérer un projet complexe avec une efficacité impressionnante. Un partenaire de confiance pour nos futurs projets.",
+    id: "jean",
+    name: t("clients.jean.name"),
+    role: t("clients.jean.role"),
+    project: t("clients.jean.project"),
+    quote: t("clients.jean.quote"),
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
     rating: 5
   },
   {
-    id: "3",
-    name: "Marie Dubois",
-    role: "Architecte",
-    project: "Rénovation Château de la Loire",
-    quote: "Expertise technique et respect du patrimoine architectural. L'équipe a su préserver l'authenticité tout en intégrant les normes modernes. Un travail d'orfèvre absolument remarquable.",
+    id: "marie",
+    name: t("clients.marie.name"),
+    role: t("clients.marie.role"),
+    project: t("clients.marie.project"),
+    quote: t("clients.marie.quote"),
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
     rating: 5
   },
   {
-    id: "4",
-    name: "Thomas Leclerc",
-    role: "Promoteur immobilier",
-    project: "Immeuble résidentiel Le Parc",
-    quote: "Collaboration exemplaire sur notre projet immobilier. La rigueur et la qualité d'exécution ont permis de livrer en avance. BTP Excellence est notre partenaire privilégié.",
+    id: "thomas",
+    name: t("clients.thomas.name"),
+    role: t("clients.thomas.role"),
+    project: t("clients.thomas.project"),
+    quote: t("clients.thomas.quote"),
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
     rating: 5
   },
   {
-    id: "5",
-    name: "Isabelle Laurent",
-    role: "Propriétaire",
-    project: "Extension maison familiale",
-    quote: "À l'écoute, réactifs et créatifs. Notre extension a été réalisée dans les règles de l'art. L'équipe a su proposer des solutions innovantes tout en respectant notre budget.",
+    id: "isabelle",
+    name: t("clients.isabelle.name"),
+    role: t("clients.isabelle.role"),
+    project: t("clients.isabelle.project"),
+    quote: t("clients.isabelle.quote"),
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face",
     rating: 5
   },
   {
-    id: "6",
-    name: "François Bernard",
-    role: "Chef de projet",
-    project: "Restauration façade historique",
-    quote: "Savoir-faire exceptionnel en restauration du patrimoine. Chaque détail a été traité avec le plus grand soin. Un résultat qui honore l'histoire du bâtiment.",
+    id: "francois",
+    name: t("clients.francois.name"),
+    role: t("clients.francois.role"),
+    project: t("clients.francois.project"),
+    quote: t("clients.francois.quote"),
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
     rating: 5
   }
@@ -193,14 +191,14 @@ export const TESTIMONIALS: Testimonial[] = [
 /**
  * Informations de l'entreprise
  */
-export const COMPANY_INFO = {
-  name: "BTP Excellence",
-  tagline: "Votre partenaire construction de confiance",
-  description: "Expert en construction, rénovation et maçonnerie depuis plus de 25 ans.",
-  phone: "+33 1 23 45 67 89",
-  email: "contact@btp-excellence.fr",
-  address: "15 Avenue des Bâtisseurs, 75000 Paris",
-  founded: 1998,
-  employees: 45,
+export const getCompanyInfo = (t: ReturnType<typeof useTranslations>) => ({
+  name: t("name"),
+  tagline: t("tagline"),
+  description: t("description"),
+  phone: t("phone"),
+  email: t("email"),
+  address: t("address"),
+  founded: t("founded"),
+  employees: 45, // tu peux garder les valeurs fixes ou les traduire si nécessaire
   projects: 500
-};
+});

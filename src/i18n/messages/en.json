@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Free Quote"
+  },
+  "hero": {
+    "badge": "Since {year} • +{projects} completed projects",
+    "tagline": "Your Trusted Construction Partner",
+    "description": "Expert in construction, renovation and masonry for over {years} years. Let's turn your projects into reality.",
+    "features": {
+      "quote": "Free quote within 48h",
+      "team": "Qualified and certified team",
+      "warranty": "10-year warranty",
+      "deadline": "On-time delivery"
+    },
+    "cta": {
+      "primary": "Request a quote",
+      "secondary": "View our work"
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Completed projects",
+      "employees": "Team members",
+      "satisfaction": "Satisfied clients"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Construction Expertise",
+    "cta": {
+      "description": "Need a personalized service? Contact us for a free quote.",
+      "button": "Request a quote"
+    },
+    "construction": {
+      "title": "New Construction",
+      "description": "We deliver your construction projects from A to Z with expertise and quality.",
+      "features": {
+        "houses": "Single-family homes",
+        "commercial": "Commercial buildings",
+        "studies": "Technical studies",
+        "monitoring": "Site monitoring"
+      }
+    },
+    "renovation": {
+      "title": "Renovation",
+      "description": "Complete or partial renovation of your buildings while respecting the existing character.",
+      "features": {
+        "interior": "Interior renovation",
+        "exterior": "Exterior renovation",
+        "standards": "Code compliance",
+        "energy": "Energy renovation"
+      }
+    },
+    "masonry": {
+      "title": "Masonry",
+      "description": "General and specialized masonry work by qualified craftsmen.",
+      "features": {
+        "structure": "Structural work",
+        "facades": "Facades",
+        "walls": "Load-bearing walls",
+        "foundations": "Foundations"
+      }
+    },
+    "structural": {
+      "title": "Structural Work",
+      "description": "Expertise in structural work for solid and durable structures.",
+      "features": {
+        "earthwork": "Earthwork",
+        "concrete": "Concrete slab",
+        "framework": "Framework",
+        "elevation": "Wall elevation"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Portfolio",
+    "location": "Location",
+    "year": "Year",
+    "projects": {
+      "villa": {
+        "title": "Modern Villa Les Pins",
+        "category": "New Construction",
+        "description": "Contemporary 200m² villa with pool and terrace.",
+        "location": "Lyon"
+      },
+      "castle": {
+        "title": "Loire Castle Renovation",
+        "category": "Renovation",
+        "description": "Complete renovation of an 18th century castle.",
+        "location": "Tours"
+      },
+      "building": {
+        "title": "Le Parc Residential Building",
+        "category": "Structural Work",
+        "description": "Construction of a 5-story building with 20 apartments.",
+        "location": "Marseille"
+      },
+      "extension": {
+        "title": "Family Home Extension",
+        "category": "Masonry",
+        "description": "50m² extension with veranda creation.",
+        "location": "Bordeaux"
+      },
+      "mall": {
+        "title": "Horizon Shopping Center",
+        "category": "New Construction",
+        "description": "3000m² commercial building with underground parking.",
+        "location": "Lille"
+      },
+      "facade": {
+        "title": "Historic Facade Restoration",
+        "category": "Renovation",
+        "description": "Facade restoration of a listed historical building.",
+        "location": "Paris"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our Story",
+    "heading": "Excellence and Passion for {years} years",
+    "description": "BTP Excellence is a family business specializing in construction, renovation and masonry. Since {founded}, we have put our expertise at the service of your most ambitious projects.",
+    "mission": "Our mission is to turn your dreams into reality, combining traditional know-how with modern techniques. Each project is unique and deserves special attention.",
+    "stats": {
+      "experience": "years of experience",
+      "employees": "team members",
+      "projects": "completed projects"
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Quality",
+        "description": "Excellence in every detail"
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Transparency and honesty"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Cutting-edge technology"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "They Trust Us",
+    "subtitle": "Testimonials",
+    "clients": {
+      "sophie": {
+        "name": "Sophie Martin",
+        "role": "Owner",
+        "project": "Modern Villa Les Pins",
+        "quote": "An exceptional team that turned our dream into reality. The quality of work and respect for deadlines exceeded our expectations. We highly recommend BTP Excellence."
+      },
+      "jean": {
+        "name": "Jean-Pierre Durand",
+        "role": "CEO",
+        "project": "Horizon Shopping Center",
+        "quote": "Remarkable professionalism from start to finish. BTP Excellence managed a complex project with impressive efficiency. A trusted partner for our future projects."
+      },
+      "marie": {
+        "name": "Marie Dubois",
+        "role": "Architect",
+        "project": "Loire Castle Renovation",
+        "quote": "Technical expertise and respect for architectural heritage. The team preserved authenticity while integrating modern standards. Absolutely remarkable craftsmanship."
+      },
+      "thomas": {
+        "name": "Thomas Leclerc",
+        "role": "Real Estate Developer",
+        "project": "Le Parc Residential Building",
+        "quote": "Exemplary collaboration on our real estate project. The rigor and quality of execution allowed early delivery. BTP Excellence is our preferred partner."
+      },
+      "isabelle": {
+        "name": "Isabelle Laurent",
+        "role": "Owner",
+        "project": "Family Home Extension",
+        "quote": "Attentive, responsive and creative. Our extension was carried out professionally. The team proposed innovative solutions while respecting our budget."
+      },
+      "francois": {
+        "name": "François Bernard",
+        "role": "Project Manager",
+        "project": "Historic Facade Restoration",
+        "quote": "Exceptional know-how in heritage restoration. Every detail was treated with the utmost care. A result that honors the building's history."
+      }
+    }
+  },
+  "contact": {
+    "title": "Request a Free Quote",
+    "subtitle": "Our team supports you from A to Z in the realization of your project",
+    "heading": "Let's Turn Your Project Into Reality",
+    "description": "Contact us today to discuss your project. Our team will respond within 24 hours with a free and personalized quote.",
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "schedule": "Mon - Fri: 8am - 6pm\nSat: 9am - 12pm"
+    },
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+33 1 23 45 67 89",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjects": {
+        "quote": "Quote request",
+        "construction": "New construction",
+        "renovation": "Renovation",
+        "masonry": "Masonry",
+        "other": "Other request"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Describe your project in detail...",
+      "submit": "Request a free quote",
+      "submitting": "Sending...",
+      "required": "*",
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "phoneInvalid": "Invalid phone",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "messageMinLength": "Message must contain at least 10 characters"
+      },
+      "success": "Message sent successfully! We will respond within 24 hours.",
+      "error": "An error occurred. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Your Trusted Construction Partner",
+    "description": "Expert in construction, renovation and masonry for over 25 years.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "copyright": "© {year} BTP Excellence. All rights reserved."
+  },
+  "company": {
+    "name": "BTP Excellence",
+    "tagline": "Your Trusted Construction Partner",
+    "description": "Expert in construction, renovation and masonry for over 25 years.",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@btp-excellence.fr",
+    "address": "15 Avenue des Bâtisseurs, 75000 Paris",
+    "founded": 1998
+  }
+}

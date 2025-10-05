@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Réalisations",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Devis gratuit"
+  },
+  "hero": {
+    "badge": "Depuis {year} • +{projects} projets réalisés",
+    "tagline": "Votre partenaire construction de confiance",
+    "description": "Expert en construction, rénovation et maçonnerie depuis plus de {years} ans. Transformons vos projets en réalité.",
+    "features": {
+      "quote": "Devis gratuit sous 48h",
+      "team": "Équipe qualifiée et certifiée",
+      "warranty": "Garantie décennale",
+      "deadline": "Respect des délais"
+    },
+    "cta": {
+      "primary": "Demander un devis",
+      "secondary": "Voir nos réalisations"
+    },
+    "stats": {
+      "experience": "Ans d'expérience",
+      "projects": "Projets réalisés",
+      "employees": "Collaborateurs",
+      "satisfaction": "Clients satisfaits"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Expertise BTP",
+    "cta":{
+      "description": "Besoin d&apos;un service personnalisé ? Contactez-nous pour un devis gratuit.",
+      "button": "Devis gratuit"
+    },
+    "construction": {
+      "title": "Construction neuve",
+      "description": "Nous réalisons vos projets de construction de A à Z avec expertise et qualité.",
+      "features": {
+        "houses": "Maisons individuelles",
+        "commercial": "Bâtiments commerciaux",
+        "studies": "Études techniques",
+        "monitoring": "Suivi de chantier"
+      }
+    },
+    "renovation": {
+      "title": "Rénovation",
+      "description": "Rénovation complète ou partielle de vos bâtiments avec respect du cachet existant.",
+      "features": {
+        "interior": "Rénovation intérieure",
+        "exterior": "Rénovation extérieure",
+        "standards": "Mise aux normes",
+        "energy": "Rénovation énergétique"
+      }
+    },
+    "masonry": {
+      "title": "Maçonnerie",
+      "description": "Travaux de maçonnerie générale et spécialisée par des artisans qualifiés.",
+      "features": {
+        "structure": "Gros œuvre",
+        "facades": "Façades",
+        "walls": "Murs porteurs",
+        "foundations": "Fondations"
+      }
+    },
+    "structural": {
+      "title": "Gros œuvre",
+      "description": "Expertise en gros œuvre pour des structures solides et durables.",
+      "features": {
+        "earthwork": "Terrassement",
+        "concrete": "Dalle béton",
+        "framework": "Charpente",
+        "elevation": "Élévation des murs"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Nos Réalisations",
+    "subtitle": "Portfolio",
+    "location": "Localisation",
+    "year": "Année",
+    "projects": {
+      "villa": {
+        "title": "Villa moderne Les Pins",
+        "category": "Construction neuve",
+        "description": "Villa contemporaine de 200m² avec piscine et terrasse.",
+        "location": "Lyon"
+      },
+      "castle": {
+        "title": "Rénovation Château de la Loire",
+        "category": "Rénovation",
+        "description": "Rénovation complète d'un château du 18ème siècle.",
+        "location": "Tours"
+      },
+      "building": {
+        "title": "Immeuble résidentiel Le Parc",
+        "category": "Gros œuvre",
+        "description": "Construction d'un immeuble de 5 étages, 20 appartements.",
+        "location": "Marseille"
+      },
+      "extension": {
+        "title": "Extension maison familiale",
+        "category": "Maçonnerie",
+        "description": "Extension de 50m² avec création d'une véranda.",
+        "location": "Bordeaux"
+      },
+      "mall": {
+        "title": "Centre commercial Horizon",
+        "category": "Construction neuve",
+        "description": "Bâtiment commercial de 3000m² avec parking souterrain.",
+        "location": "Lille"
+      },
+      "facade": {
+        "title": "Restauration façade historique",
+        "category": "Rénovation",
+        "description": "Restauration de façade d'un bâtiment classé monument historique.",
+        "location": "Paris"
+      }
+    }
+  },
+  "about": {
+    "title": "À Propos",
+    "subtitle": "Notre Histoire",
+    "heading": "Excellence et Passion depuis {years} ans",
+    "description": "BTP Excellence est une entreprise familiale spécialisée dans la construction, la rénovation et la maçonnerie. Depuis {founded}, nous mettons notre expertise au service de vos projets les plus ambitieux.",
+    "mission": "Notre mission est de transformer vos rêves en réalité, en alliant savoir-faire traditionnel et techniques modernes. Chaque projet est unique et mérite une attention particulière.",
+    "stats": {
+      "experience": "ans d'expérience",
+      "employees": "collaborateurs",
+      "projects": "projets réalisés"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "quality": {
+        "title": "Qualité",
+        "description": "Excellence dans chaque détail"
+      },
+      "trust": {
+        "title": "Confiance",
+        "description": "Transparence et honnêteté"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Technologies de pointe"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Ils nous font confiance",
+    "subtitle": "Témoignages",
+    "clients": {
+      "sophie": {
+        "name": "Sophie Martin",
+        "role": "Propriétaire",
+        "project": "Villa moderne Les Pins",
+        "quote": "Une équipe exceptionnelle qui a transformé notre rêve en réalité. La qualité du travail et le respect des délais ont dépassé nos attentes. Nous recommandons vivement BTP Excellence."
+      },
+      "jean": {
+        "name": "Jean-Pierre Durand",
+        "role": "Directeur Général",
+        "project": "Centre commercial Horizon",
+        "quote": "Professionnalisme remarquable du début à la fin. BTP Excellence a su gérer un projet complexe avec une efficacité impressionnante. Un partenaire de confiance pour nos futurs projets."
+      },
+      "marie": {
+        "name": "Marie Dubois",
+        "role": "Architecte",
+        "project": "Rénovation Château de la Loire",
+        "quote": "Expertise technique et respect du patrimoine architectural. L'équipe a su préserver l'authenticité tout en intégrant les normes modernes. Un travail d'orfèvre absolument remarquable."
+      },
+      "thomas": {
+        "name": "Thomas Leclerc",
+        "role": "Promoteur immobilier",
+        "project": "Immeuble résidentiel Le Parc",
+        "quote": "Collaboration exemplaire sur notre projet immobilier. La rigueur et la qualité d'exécution ont permis de livrer en avance. BTP Excellence est notre partenaire privilégié."
+      },
+      "isabelle": {
+        "name": "Isabelle Laurent",
+        "role": "Propriétaire",
+        "project": "Extension maison familiale",
+        "quote": "À l'écoute, réactifs et créatifs. Notre extension a été réalisée dans les règles de l'art. L'équipe a su proposer des solutions innovantes tout en respectant notre budget."
+      },
+      "francois": {
+        "name": "François Bernard",
+        "role": "Chef de projet",
+        "project": "Restauration façade historique",
+        "quote": "Savoir-faire exceptionnel en restauration du patrimoine. Chaque détail a été traité avec le plus grand soin. Un résultat qui honore l'histoire du bâtiment."
+      }
+    }
+  },
+  "contact": {
+    "title": "Demandez un devis gratuit",
+    "subtitle": "Notre équipe vous accompagne de A à Z dans la réalisation de votre projet",
+    "heading": "Transformons votre projet en réalité",
+    "description": "Contactez-nous dès aujourd'hui pour discuter de votre projet. Notre équipe vous répondra sous 24h avec un devis gratuit et personnalisé.",
+    "info": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "Email",
+      "hours": "Horaires",
+      "schedule": "Lun - Ven : 8h - 18h\nSam : 9h - 12h"
+    },
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom complet",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+33 1 23 45 67 89",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sélectionnez un sujet",
+      "subjects": {
+        "quote": "Demande de devis",
+        "construction": "Construction neuve",
+        "renovation": "Rénovation",
+        "masonry": "Maçonnerie",
+        "other": "Autre demande"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre projet en détail...",
+      "submit": "Demander un devis gratuit",
+      "submitting": "Envoi en cours...",
+      "required": "*",
+      "errors": {
+        "nameRequired": "Le nom est requis",
+        "emailRequired": "L'email est requis",
+        "emailInvalid": "Email invalide",
+        "phoneInvalid": "Téléphone invalide",
+        "subjectRequired": "Le sujet est requis",
+        "messageRequired": "Le message est requis",
+        "messageMinLength": "Le message doit contenir au moins 10 caractères"
+      },
+      "success": "Message envoyé avec succès ! Nous vous répondrons sous 24h.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "tagline": "Votre partenaire construction de confiance",
+    "description": "Expert en construction, rénovation et maçonnerie depuis plus de 25 ans.",
+    "quickLinks": "Liens rapides",
+    "followUs": "Suivez-nous",
+    "copyright": "© {year} BTP Excellence. Tous droits réservés."
+  },
+  "company": {
+    "name": "BTP Excellence",
+    "tagline": "Votre partenaire construction de confiance",
+    "description": "Expert en construction, rénovation et maçonnerie depuis plus de 25 ans.",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@btp-excellence.fr",
+    "address": "15 Avenue des Bâtisseurs, 75000 Paris",
+    "founded": 1998
+  }
+}

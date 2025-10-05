@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Realizaciones",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "cta": "Presupuesto Gratis"
+  },
+  "hero": {
+    "badge": "Desde {year} • +{projects} proyectos realizados",
+    "tagline": "Su Socio de Construcción de Confianza",
+    "description": "Expertos en construcción, renovación y albañilería desde hace más de {years} años. Transformamos sus proyectos en realidad.",
+    "features": {
+      "quote": "Presupuesto gratis en 48h",
+      "team": "Equipo cualificado y certificado",
+      "warranty": "Garantía decenal",
+      "deadline": "Cumplimiento de plazos"
+    },
+    "cta": {
+      "primary": "Solicitar presupuesto",
+      "secondary": "Ver nuestras obras"
+    },
+    "stats": {
+      "experience": "Años de experiencia",
+      "projects": "Proyectos realizados",
+      "employees": "Colaboradores",
+      "satisfaction": "Clientes satisfechos"
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Experiencia en Construcción",
+    "cta": {
+      "description": "¿Necesita un servicio personalizado? Contáctenos para un presupuesto gratuito.",
+      "button": "Solicitar presupuesto"
+    },
+    "construction": {
+      "title": "Obra Nueva",
+      "description": "Realizamos sus proyectos de construcción de la A a la Z con experiencia y calidad.",
+      "features": {
+        "houses": "Casas unifamiliares",
+        "commercial": "Edificios comerciales",
+        "studies": "Estudios técnicos",
+        "monitoring": "Seguimiento de obra"
+      }
+    },
+    "renovation": {
+      "title": "Renovación",
+      "description": "Renovación completa o parcial de sus edificios respetando el carácter existente.",
+      "features": {
+        "interior": "Renovación interior",
+        "exterior": "Renovación exterior",
+        "standards": "Puesta a normas",
+        "energy": "Renovación energética"
+      }
+    },
+    "masonry": {
+      "title": "Albañilería",
+      "description": "Trabajos de albañilería general y especializada por artesanos cualificados.",
+      "features": {
+        "structure": "Obra gruesa",
+        "facades": "Fachadas",
+        "walls": "Muros de carga",
+        "foundations": "Cimientos"
+      }
+    },
+    "structural": {
+      "title": "Obra Gruesa",
+      "description": "Experiencia en obra gruesa para estructuras sólidas y duraderas.",
+      "features": {
+        "earthwork": "Movimiento de tierras",
+        "concrete": "Losa de hormigón",
+        "framework": "Estructura",
+        "elevation": "Elevación de muros"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Nuestras Realizaciones",
+    "subtitle": "Portfolio",
+    "location": "Ubicación",
+    "year": "Año",
+    "projects": {
+      "villa": {
+        "title": "Villa Moderna Les Pins",
+        "category": "Obra Nueva",
+        "description": "Villa contemporánea de 200m² con piscina y terraza.",
+        "location": "Lyon"
+      },
+      "castle": {
+        "title": "Renovación Castillo del Loira",
+        "category": "Renovación",
+        "description": "Renovación completa de un castillo del siglo XVIII.",
+        "location": "Tours"
+      },
+      "building": {
+        "title": "Edificio Residencial Le Parc",
+        "category": "Obra Gruesa",
+        "description": "Construcción de un edificio de 5 pisos, 20 apartamentos.",
+        "location": "Marsella"
+      },
+      "extension": {
+        "title": "Ampliación Casa Familiar",
+        "category": "Albañilería",
+        "description": "Ampliación de 50m² con creación de veranda.",
+        "location": "Burdeos"
+      },
+      "mall": {
+        "title": "Centro Comercial Horizon",
+        "category": "Obra Nueva",
+        "description": "Edificio comercial de 3000m² con aparcamiento subterráneo.",
+        "location": "Lille"
+      },
+      "facade": {
+        "title": "Restauración Fachada Histórica",
+        "category": "Renovación",
+        "description": "Restauración de fachada de un edificio catalogado como monumento histórico.",
+        "location": "París"
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Nuestra Historia",
+    "heading": "Excelencia y Pasión desde hace {years} años",
+    "description": "BTP Excellence es una empresa familiar especializada en construcción, renovación y albañilería. Desde {founded}, ponemos nuestra experiencia al servicio de sus proyectos más ambiciosos.",
+    "mission": "Nuestra misión es transformar sus sueños en realidad, combinando saber hacer tradicional con técnicas modernas. Cada proyecto es único y merece una atención especial.",
+    "stats": {
+      "experience": "años de experiencia",
+      "employees": "colaboradores",
+      "projects": "proyectos realizados"
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "quality": {
+        "title": "Calidad",
+        "description": "Excelencia en cada detalle"
+      },
+      "trust": {
+        "title": "Confianza",
+        "description": "Transparencia y honestidad"
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Tecnología de vanguardia"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Confían en Nosotros",
+    "subtitle": "Testimonios",
+    "clients": {
+      "sophie": {
+        "name": "Sophie Martin",
+        "role": "Propietaria",
+        "project": "Villa Moderna Les Pins",
+        "quote": "Un equipo excepcional que transformó nuestro sueño en realidad. La calidad del trabajo y el respeto de los plazos superaron nuestras expectativas. Recomendamos encarecidamente BTP Excellence."
+      },
+      "jean": {
+        "name": "Jean-Pierre Durand",
+        "role": "Director General",
+        "project": "Centro Comercial Horizon",
+        "quote": "Profesionalismo notable de principio a fin. BTP Excellence gestionó un proyecto complejo con una eficiencia impresionante. Un socio de confianza para nuestros futuros proyectos."
+      },
+      "marie": {
+        "name": "Marie Dubois",
+        "role": "Arquitecta",
+        "project": "Renovación Castillo del Loira",
+        "quote": "Experiencia técnica y respeto por el patrimonio arquitectónico. El equipo preservó la autenticidad integrando las normas modernas. Un trabajo de orfebrería absolutamente notable."
+      },
+      "thomas": {
+        "name": "Thomas Leclerc",
+        "role": "Promotor Inmobiliario",
+        "project": "Edificio Residencial Le Parc",
+        "quote": "Colaboración ejemplar en nuestro proyecto inmobiliario. El rigor y la calidad de ejecución permitieron entregar antes de tiempo. BTP Excellence es nuestro socio privilegiado."
+      },
+      "isabelle": {
+        "name": "Isabelle Laurent",
+        "role": "Propietaria",
+        "project": "Ampliación Casa Familiar",
+        "quote": "Atentos, reactivos y creativos. Nuestra ampliación se realizó según las reglas del arte. El equipo supo proponer soluciones innovadoras respetando nuestro presupuesto."
+      },
+      "francois": {
+        "name": "François Bernard",
+        "role": "Jefe de Proyecto",
+        "project": "Restauración Fachada Histórica",
+        "quote": "Saber hacer excepcional en restauración del patrimonio. Cada detalle fue tratado con el mayor cuidado. Un resultado que honra la historia del edificio."
+      }
+    }
+  },
+  "contact": {
+    "title": "Solicite un Presupuesto Gratis",
+    "subtitle": "Nuestro equipo le acompaña de la A a la Z en la realización de su proyecto",
+    "heading": "Transformemos su Proyecto en Realidad",
+    "description": "Contáctenos hoy para discutir su proyecto. Nuestro equipo responderá en 24h con un presupuesto gratuito y personalizado.",
+    "info": {
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "email": "Email",
+      "hours": "Horarios",
+      "schedule": "Lun - Vie: 8h - 18h\nSáb: 9h - 12h"
+    },
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Su nombre completo",
+      "email": "Email",
+      "emailPlaceholder": "su@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+33 1 23 45 67 89",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Seleccione un asunto",
+      "subjects": {
+        "quote": "Solicitud de presupuesto",
+        "construction": "Obra nueva",
+        "renovation": "Renovación",
+        "masonry": "Albañilería",
+        "other": "Otra solicitud"
+      },
+      "message": "Mensaje",
+      "messagePlaceholder": "Describa su proyecto en detalle...",
+      "submit": "Solicitar un presupuesto gratis",
+      "submitting": "Enviando...",
+      "required": "*",
+      "errors": {
+        "nameRequired": "El nombre es obligatorio",
+        "emailRequired": "El email es obligatorio",
+        "emailInvalid": "Email inválido",
+        "phoneInvalid": "Teléfono inválido",
+        "subjectRequired": "El asunto es obligatorio",
+        "messageRequired": "El mensaje es obligatorio",
+        "messageMinLength": "El mensaje debe contener al menos 10 caracteres"
+      },
+      "success": "¡Mensaje enviado con éxito! Responderemos en 24h.",
+      "error": "Ocurrió un error. Por favor, inténtelo de nuevo."
+    }
+  },
+  "footer": {
+    "tagline": "Su Socio de Construcción de Confianza",
+    "description": "Expertos en construcción, renovación y albañilería desde hace más de 25 años.",
+    "quickLinks": "Enlaces Rápidos",
+    "followUs": "Síguenos",
+    "copyright": "© {year} BTP Excellence. Todos los derechos reservados."
+  },
+  "company": {
+    "name": "BTP Excellence",
+    "tagline": "Su Socio de Construcción de Confianza",
+    "description": "Expertos en construcción, renovación y albañilería desde hace más de 25 años.",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@btp-excellence.fr",
+    "address": "15 Avenue des Bâtisseurs, 75000 Paris",
+    "founded": 1998
+  }
+}

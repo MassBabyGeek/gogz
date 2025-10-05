@@ -1,0 +1,308 @@
+@import "tailwindcss";
+
+/**
+ * Design System BTP Premium - Style dimension.dev
+ * Glassmorphism prononcé, grilles subtiles, animations fluides
+ */
+
+:root {
+  /* Fonds - Noir profond dimension.dev style */
+  --background: #09090B;
+  --background-secondary: #0F0F12;
+  --background-elevated: #18181B;
+
+  /* Accents - Bleus lumineux */
+  --primary: #3B82F6; /* Bleu vif */
+  --primary-light: #60A5FA; /* Bleu clair */
+  --primary-dark: #1E40AF;
+
+  /* Luxe - Doré champagne */
+  --gold: #D4AF37;
+  --gold-dark: #B8941F;
+
+  /* Texte */
+  --foreground: #FAFAFA;
+  --foreground-secondary: #A1A1AA;
+  --foreground-muted: #71717A;
+
+  /* Bordures lumineuses */
+  --border: #27272A;
+  --border-light: #3F3F46;
+  --border-glow: rgba(59, 130, 246, 0.5);
+
+  /* Glass effect dimension.dev */
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  /* Couleurs */
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-elevated: var(--background-elevated);
+
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+
+  /* Fonts */
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
+
+  /* Transitions ultra-fluides dimension.dev */
+  --transition-fast: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 800ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Système d'espacement cohérent - Design System */
+  /* Base : 4px (Tailwind scale) */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+  --spacing-2xl: 4rem;     /* 64px */
+  --spacing-3xl: 6rem;     /* 96px */
+  --spacing-4xl: 8rem;     /* 128px */
+
+  /* Espacement des sections */
+  --section-padding-y: 5rem;        /* 80px - Mobile */
+  --section-padding-y-md: 7rem;     /* 112px - Tablet */
+  --section-padding-y-lg: 10rem;    /* 160px - Desktop */
+
+  /* Espacement entre éléments */
+  --gap-section-title: 1.5rem;      /* 24px - Entre titre et contenu */
+  --gap-cards: 2rem;                /* 32px - Entre cartes */
+  --gap-cards-lg: 3rem;             /* 48px - Entre cartes desktop */
+
+  /* Padding des composants */
+  --card-padding-sm: 1.5rem;        /* 24px */
+  --card-padding-md: 2rem;          /* 32px */
+  --card-padding-lg: 2.5rem;        /* 40px */
+
+  /* Container */
+  --container-padding-x: 1.5rem;    /* 24px - Mobile */
+  --container-padding-x-lg: 5rem;   /* 80px - Desktop */
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Gradient de fond dimension.dev */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #09090B 0%, #000000 100%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Grille de points style dimension.dev */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(96, 165, 250, 0.12) 1px, transparent 0);
+  background-size: 48px 48px;
+  z-index: -1;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+}
+
+/* Scrollbar premium */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Glassmorphism dimension.dev - ULTRA PRONONCÉ */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-strong {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 2px 4px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+/* Bordure lumineuse dimension.dev */
+.border-glow {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--background-elevated), var(--background-elevated)) padding-box,
+    linear-gradient(135deg, rgba(96, 165, 250, 0.3), rgba(212, 175, 55, 0.2)) border-box;
+  position: relative;
+}
+
+.border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg,
+    rgba(96, 165, 250, 0.5) 0%,
+    rgba(212, 175, 55, 0.3) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border-glow:hover::after {
+  opacity: 1;
+}
+
+/* Effet de lueur dimension.dev - TRÈS PRONONCÉ */
+.glow-on-hover {
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.glow-on-hover::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(96, 165, 250, 0.4) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-on-hover:hover::before {
+  opacity: 1;
+}
+
+.glow-on-hover:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 60px -15px rgba(96, 165, 250, 0.3),
+    0 0 80px -20px rgba(96, 165, 250, 0.2);
+}
+
+/* Ligne de séparation élégante */
+.elegant-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent
+  );
+}
+
+/* Titres dimension.dev - TRÈS GRANDS */
+.title-dimension {
+  background: linear-gradient(
+    135deg,
+    #FAFAFA 0%,
+    #A1A1AA 50%,
+    #FAFAFA 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 8s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Titre avec effet doré */
+.title-luxury {
+  background: linear-gradient(135deg, #FAFAFA 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

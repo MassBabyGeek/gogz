@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     title: "Centre commercial Horizon",
     category: "Construction neuve",
     description: "Bâtiment commercial de 3000m² avec parking souterrain.",
-    imageUrl: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1195&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     year: 2022,
     location: "Lille"
   },

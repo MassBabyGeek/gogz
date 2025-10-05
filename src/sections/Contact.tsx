@@ -90,11 +90,25 @@ export default function Contact() {
     setSubmitStatus("idle");
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log("Formulaire soumis:", formData);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Erreur lors de l\'envoi');
+      }
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    } catch {
+      setErrors({});
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
